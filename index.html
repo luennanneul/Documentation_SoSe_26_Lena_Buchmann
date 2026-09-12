@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenas digitale Doku </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="grafiken/suchknopf.svg" alt="suche" class="knopf" id="searchButton">
+    </header>
+
+    <map name="background_map">
+    <!-- Personen -->
+        <area id="nils" target="" alt="Nils" title="Nils" coords="479,962,303,732" shape="rect">
+        <area id="oliver" target="" alt="Oliver" title="Oliver" coords="872,774,788,549" shape="rect">
+        <area id="janne" target="" alt="Janne" title="Janne" coords="934,456,828,274" shape="rect">
+        <area id="liz" target="" alt="Liz" title="Liz" coords="1093,250,1226,396" shape="rect">
+        <area id="jonathan" target="" alt="Jonathan" title="Jonathan" coords="1826,790,1742,657" shape="rect">
+        <area id="jasper" target="" alt="Jasper" title="Jasper" coords="1919,774,1840,633" shape="rect">
+        <area id="stig" target="" alt="Stig" title="Stig" coords="1990,619,1924,774" shape="rect">
+        <area id="Flo" target="" alt="Flo" title="Flo" coords="2215,770,2131,925" shape="rect">
+        <area id="adrian" target="" alt="Adrian" title="Adrian" coords="3213,577,3098,754" shape="rect">
+        <area id="paul" target="" alt="Paul" title="Paul" coords="3545,436,3447,520" shape="rect">
+        <area id="jana" target="" alt="Jana" title="Jana" coords="3929,633,3805,858" shape="rect">
+        <area id="mia" target="" alt="Mia" title="Mia" coords="3483,684,3584,869" shape="rect">
+        <area id="hannes" target="" alt="Hannes" title="Hannes" coords="3686,673,3602,827" shape="rect">
+        <area id="luisa" target="" alt="Luisa" title="Luisa" coords="4238,794,4331,962" shape="rect">
+        <area id="nastie" target="" alt="Nastie" title="Nastie" coords="4415,796,4335,965" shape="rect">
+        <!-- <area target="" alt="Statist*in" title="Statist*in" coords="1411,827,1310,650" shape="rect">
+        <area target="" alt="irrelevante Person Nr.2" title="irrelevante Person Nr.2" coords="2948,571,3028,712" shape="rect">
+        <area target="" alt="NPC " title="NPC " coords="4574,624,4667,743" shape="rect"> -->
+        <area target="" alt="Lena" title="Lena" coords="3995,606,4088,783" shape="rect">
+        <!-- <area target="" alt="nameless" title="nameless" coords="2683,801,2785,942" shape="rect">
+        <area target="" alt="vielleicht Hannelore???" title="vielleicht Hannelore???" coords="3037,794,3152,914" shape="rect"> -->
+        <!-- <area target="" alt="Bremer Stadtmusikanten" title="Bremer Stadtmusikanten" coords="4322,564,4441,768" shape="rect">
+        <area target="" alt="Tintling (do not eat!)" title="Tintling (do not eat!)" coords="2414,670,2507,799" shape="rect"> -->
+        <area target="" alt="Rarrrrrr!" title="Löwengeräusche " coords="3377,735,3284,469" shape="rect">
+        <!-- Klickbare Kreise-->
+        <area target="" title="Jelly Workshop" coords="148,596,95" shape="circle" id="jelly">
+        <area target="" alt="Schreibworkshop" title="Schreibworkshop" coords="652,633,95" shape="circle" id="schreiben">
+        <area target="" alt="Justiiiiin" title="Justiiiiin" coords="1186,894,97" shape="circle" id="justin">
+        <area target="" alt="Polyphem" title="Polyphem" coords="4596,684,75" shape="circle" id="polyphem">
+        <area target="" alt="Artfight" title="Artfight" coords="925,575,96" shape="circle" id="artfight">
+        <area target="" alt="spaz" title="spaz"  coords="1371,702,85" shape="circle" id="spaziergangimweb">
+        <area target="" alt="Typowalk_in_Bremen" title="Typowalk_in_Bremen" coords="4379,489,74" shape="circle" id="brm">
+        <area target="" alt="Audiowalk" title="Audiowalk" coords="2732,792,60" shape="circle" id="audiowalk">
+        <area target="" alt="Wunderlauch" title="Wunderlauch" coords="3015,881,87" shape="circle" id="semesterprojekt">
+        <area target="" alt="Funganza" title="Funganza" coords="2467,747,101" shape="circle" id="funganza">
+        <area target="" alt="Rundgang" title="Rundgang" coords="1650,566,92" shape="circle" id="rundgang">
+        <area target="" alt="loewe" title="loewe" coords="3333,367,101" shape="circle" id="loewe">
+        <area target="" alt="Reflexion" title="Reflexion"  coords="2039,366,97" shape="circle" id="bib">
+        <area target="" alt="Briefprojekt" title="Briefprojekt" coords="4083,706,106" shape="circle" id="briefe">
+        <area target="" alt="Typowalk_in_Braunschweig" title="Typowalk_in_Braunschweig" coords="1614,854,80" shape="circle" id="typowalk">
+        <area target="" alt="Wasserprojekt" title="Wasserprojekt" coords="4830,819,93" shape="circle" id="wasser">
+    </map>
+
+    <map name="popup"> 
+        <area target="" alt="weiter" title="weiter" coords="538,972,543,799,380,798,386,978" shape="poly" data-action="next">
+        <area target="" alt="zurueck" title="zurueck" coords="526,221,530,126,531,56,109,52,53,104,54,164,75,207,86,227" shape="poly" data-action="back">
+    </map>
+
+
+    <div>
+        <img id="background_normal" src="grafiken/bunt.png" alt="schönesbild" usemap="#background_map" class="background">
+    </div> 
+
+    <div id="nameDisplay"></div>
+
+    <div id="popupOverlay">
+
+    <div id="popupWindow">
+        <audio id="popupSound"></audio>
+
+        <img id="popupImage" src="/grafiken/block1.png" usemap="#popup">
+
+        <div id="popupText">
+            <h2 id="popupTitle"></h2>
+            <p id="popuppreDatum"></p>            
+            <img id="popupPhoto" alt="">
+            <video id="popupVideo" controls></video>
+            <p id="popupDatum"></p>
+            <p id="popupDescription"></p>
+            <a id="popupLink" target="_blank"></a>
+        </div>
+
+        <img id="closeButton" class="knopf" src="/grafiken/x knopf.svg">
+
+    </div>
+
+</div>
+
+
+
+    <footer>
+        <p>© Lena Buchmann 2026</p>
+    </footer>
+
+    <!-- resized das bild, bzw die koordinaten damit meine koordinaten weiter so sind wie sie sein sollen.-->
+    <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
